@@ -16,10 +16,10 @@ engine = create_engine('sqlite:///basepaises.db')
 Session = sessionmaker(bind=engine)
 session = Session()
 
-t = requests.get("https://pkgstore.datahub.io/core/country-codes/country-codes_json/data/616b1fb83cbfd4eb6d9e7d52924bb00a/country-codes_json.json")
+cadena = requests.get("https://pkgstore.datahub.io/core/country-codes/country-codes_json/data/616b1fb83cbfd4eb6d9e7d52924bb00a/country-codes_json.json")
 
 
-doc = t.json()
+doc = cadena.json()
 
 
 for d in doc:
